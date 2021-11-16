@@ -4,6 +4,12 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+// gatsby-config.jsに利用する環境変数ファイルとプラグイン情報を書くことができ、以下のように設定します。
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "This is test blog",
@@ -11,5 +17,13 @@ module.exports = {
     author: "Engineer Kazu",
   },
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_API_KEY,
+      },
+    },
+  ],
 }
