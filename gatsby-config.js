@@ -18,6 +18,8 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
