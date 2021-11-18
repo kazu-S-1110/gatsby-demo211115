@@ -3,10 +3,12 @@ import { Hero } from "../components/hero"
 import { Layout } from "../components/layout"
 import { PostLink } from "../components/post-link"
 import { graphql } from "gatsby"
+import { Seo } from "../components/seo"
 
 export default function Home({ data }) {
   return (
     <Layout>
+      <Seo title="Test blog" description="Gatsbyを使ったブログです。" />
       <Hero />
       {data.allContentfulPost.edges.map(edge => (
         <PostLink key={edge.node.slug} post={edge.node} />
