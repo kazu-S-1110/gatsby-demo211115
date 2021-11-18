@@ -5,7 +5,6 @@
  */
 
 // gatsby-config.jsに利用する環境変数ファイルとプラグイン情報を書くことができ、以下のように設定します。
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
