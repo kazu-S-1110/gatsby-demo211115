@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
-import NotFoundImg from "../../static/face-black-women-model-tanned-photography-626178-wallhere.com.jpg"
-import "../styles/404.css"
+import NotFoundImg from "../../static/surfing-926822.jpg"
 
 export default function NotFound() {
   return (
